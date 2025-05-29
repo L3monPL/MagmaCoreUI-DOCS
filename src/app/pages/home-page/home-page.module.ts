@@ -26,7 +26,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     HomeHeaderComponent,
-    HomeComponentsSectionComponent  ],
+    HomeComponentsSectionComponent  
+  ],
   exports: [
     HomePageComponent
   ]
