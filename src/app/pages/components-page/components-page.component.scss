@@ -1,0 +1,22 @@
+section{
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding: 0rem 2rem;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+
+    nav{
+        width: 240px;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.75rem;
+
+        p{
+            cursor: pointer;
+        }
+    }
+}
