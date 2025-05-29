@@ -1,0 +1,47 @@
+<h2 class="font-base-section">Card is a flexible container component</h2>
+<p class="description-section">Input</p>
+
+<!-- IMPORT -->
+<br>
+
+<h3>Import</h3>
+
+<app-code-template [code]="codeImport"></app-code-template>
+
+<!--  -->
+<br>
+<h3>Basic</h3>
+
+<magma-card>
+    <input magmaInput type="text" [(ngModel)]="textNgModel" placeholder="Some text...">
+</magma-card>
+
+<br>
+<!-- <h3 class="blue_color">Code</h3> -->
+
+<app-code-template [code]="codeCardExamp"></app-code-template>
+
+<!--  -->
+<br>
+<h3>Reactive Forms</h3>
+<magma-card>
+    <input magmaInput type="text" placeholder="Some text...">
+</magma-card>
+
+<br>
+<!-- <h3 class="blue_color">Code</h3> -->
+
+<app-code-template [code]="codeCardExampReactiveForms"></app-code-template>
+
+<!--  -->
+<br>
+<h3>Form Fields</h3>
+
+<magma-card>
+    <magma-form-field>
+        <magma-label>Stan liczb</magma-label>
+        <input magmaInput type="number" [(ngModel)]="numberExamp_1" inputTypeStyle="number" step="1" placeholder="Stan liczb">
+    </magma-form-field>
+</magma-card>
+
+

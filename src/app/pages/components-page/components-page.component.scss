@@ -22,5 +22,9 @@ section{
     .right_component{
         display: flex;
         flex: 1;
+        overflow-y: auto;
+        height: calc(100dvh - 81px - 1.5rem - 2rem);
+        padding-right: 1rem;
+        margin-right: -1rem;
     }
 }

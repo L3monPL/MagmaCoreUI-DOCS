@@ -11,7 +11,12 @@ const routes: Routes = [
     children: [
       {
         path: 'card',
-        loadComponent: () => import('../../components/components/card/card.component').then(c=>c.CardComponent),
+        component: CardComponent
+        // loadComponent: () => import('../../components/components/card/card.component').then(c=>c.CardComponent),
+      },
+      {
+        path: 'input',
+        loadComponent: () => import('../../components/components/input/input.component').then(c=>c.InputComponent),
       }
     ]
   }
