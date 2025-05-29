@@ -1,0 +1,35 @@
+section{
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding: 0rem 2rem;
+    margin-top: 2rem;
+}
+.list_container{
+    margin-top: 2rem;
+}
+ul{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+li{
+    aspect-ratio: 2;
+    cursor: pointer;
+    .card_item{
+        width: 100%;
+        height: 100%;
+        // background-color: #f3f4f6;
+        background-color: var(--magma-color-card-200);
+        border-radius: 0.5rem;
+    }
+    p{
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

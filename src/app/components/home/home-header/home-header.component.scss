@@ -1,0 +1,29 @@
+nav{
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding: 0rem 2rem;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    padding-block: 2rem;
+    position: relative;
+
+    .bottom_line{
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        right: 0;
+        left: 0;
+        background-color: color-mix(in oklab, oklch(.208 .042 265.755) 5%, transparent);
+        // background-color: #ebebeb;
+    }
+    .list_container{
+        margin-left: auto;
+
+        a{
+            margin-left: 2rem;
+        }
+    }
+}
