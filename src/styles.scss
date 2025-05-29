@@ -79,3 +79,10 @@ h2, p{
     --background-primary-100: #101827;
     --background-primary-200: #101827;
 }
+
+pre[class*="language-"] {
+  background: transparent !important; /* Użyj !important, jeśli potrzeba */
+  padding: 0px!important;
+  border-radius: 0px!important;
+  color: white;
+}

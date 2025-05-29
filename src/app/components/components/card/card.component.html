@@ -6,9 +6,26 @@
 
 <h3>Import</h3>
 
+<app-code-template [code]="codeImport"></app-code-template>
+
+<h3>Basic</h3>
+
 <magma-card>
-    <div class="code-block-container">
-        <!-- <button class="copy-button" (click)="copyCode(codeImport)">📋 Kopiuj</button> -->
-        <pre><code #codeElement>{{ codeImport }}</code></pre>
-    </div>
+    <magma-card-header>
+      <magma-card-title>
+        Card title
+      </magma-card-title>
+      <magma-card-subtitle>
+        Subtitle
+      </magma-card-subtitle>
+    </magma-card-header>
+
+    <magma-card-actions justify="end">
+        <button magmaButton color="red">Decline</button>
+        <button magmaButton color="green">Accept</button>
+      </magma-card-actions>
 </magma-card>
+
+<h3>Code</h3>
+
+<app-code-template [code]="codeCardExamp"></app-code-template>
