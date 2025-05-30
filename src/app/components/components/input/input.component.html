@@ -2,46 +2,90 @@
 <p class="description-section">Input</p>
 
 <!-- IMPORT -->
+
 <br>
-
 <h3>Import</h3>
-
 <app-code-template [code]="codeImport"></app-code-template>
+<br>
+<app-code-template [code]="codeImportFormFields"></app-code-template>
 
 <!--  -->
+
 <br>
 <h3>Basic</h3>
-
 <magma-card>
     <input magmaInput type="text" [(ngModel)]="textNgModel" placeholder="Some text...">
 </magma-card>
-
 <br>
 <!-- <h3 class="blue_color">Code</h3> -->
-
 <app-code-template [code]="codeCardExamp"></app-code-template>
 
 <!--  -->
+
 <br>
 <h3>Reactive Forms</h3>
 <magma-card>
     <input magmaInput type="text" placeholder="Some text...">
 </magma-card>
-
 <br>
 <!-- <h3 class="blue_color">Code</h3> -->
-
 <app-code-template [code]="codeCardExampReactiveForms"></app-code-template>
 
 <!--  -->
+
 <br>
 <h3>Form Fields</h3>
-
 <magma-card>
     <magma-form-field>
-        <magma-label>Stan liczb</magma-label>
-        <input magmaInput type="number" [(ngModel)]="numberExamp_1" inputTypeStyle="number" step="1" placeholder="Stan liczb">
+        <magma-label>Number</magma-label>
+        <input magmaInput type="text" [(ngModel)]="textNgModelFormField" placeholder="Some text...">
     </magma-form-field>
 </magma-card>
+<br>
+<app-code-template [code]="codeInputFormField"></app-code-template>
+
+
+<!--  -->
+
+<br>
+<p class="font-base-section-accent">Examples</p>
+
+<!--  -->
+
+<br>
+<h3>Number</h3>
+<magma-card>
+    <magma-form-field>
+        <magma-label>Number</magma-label>
+        <input magmaInput type="number" [(ngModel)]="numberExamp_1" inputTypeStyle="number" step="1" placeholder="Numbers...">
+    </magma-form-field>
+</magma-card>
+<br>
+<app-code-template [code]="numberExampCode_1"></app-code-template>
+<br>
+<magma-card>
+    <magma-form-field>
+        <magma-label>Number</magma-label>
+        <input magmaInput type="number" [(ngModel)]="numberExamp_2" inputTypeStyle="number-right" step="1" placeholder="Numbers...">
+    </magma-form-field>
+</magma-card>
+<br>
+<app-code-template [code]="numberExampCode_2"></app-code-template>
+
+<!--  -->
+
+<br>
+<h3>Textarea</h3>
+<magma-card>
+    <magma-form-field>
+        <magma-label>Textarea</magma-label>
+        <textarea magmaTextarea rows="5" style="resize: none;"></textarea>
+    </magma-form-field>
+</magma-card>
+<br>
+<app-code-template [code]="textareaCodeExamp"></app-code-template>
+
+
+<!--  -->
 
 

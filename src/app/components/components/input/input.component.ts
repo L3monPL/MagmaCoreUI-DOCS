@@ -20,20 +20,41 @@ import { FormsModule } from '@angular/forms';
 })
 export class InputComponent {
 
+  // --- Import --- //
   codeImport = `import { MagmaInputModule } from 'magma-core';`
+  codeImportFormFields = `import { MagmaFormFieldModule } from 'magma-core';`
 
-  codeCardExamp: string = `<magma-card>
-    <input magmaInput type="text">
-</magma-card>`
-
+  // --- Basic --- //
+  codeCardExamp: string = `<input magmaInput type="text" [(ngModel)]="textNgModel" placeholder="Some text...">`
   textNgModel = 'Some text...'
 
-  // 
+  // --- Reactive Forms --- //
+  codeCardExampReactiveForms: string = `<input magmaInput type="text" formControlName="text" placeholder="Some text...">`
+  
+  // --- Form Fields --- //
+  codeInputFormField: string = `<magma-form-field>
+        <magma-label>Stan liczb</magma-label>
+        <input magmaInput type="text" [(ngModel)]="textNgModelFormField" placeholder="Some text...">
+</magma-form-field>`
+  textNgModelFormField : string = `Some text...`
+  
+  // --- Number --- //
+  numberExamp_1 = 1337
+  numberExampCode_1 = `<magma-form-field>
+        <magma-label>Stan liczb</magma-label>
+        <input magmaInput type="number" [(ngModel)]="number" inputTypeStyle="number" step="1" placeholder="Numbers...">
+</magma-form-field>` 
 
-  codeCardExampReactiveForms: string = `<magma-card>
-    <input magmaInput type="text" formControlName="text" placeholder="Some text...">
-</magma-card>`
+  numberExamp_2 = 5566
+  numberExampCode_2 = `<magma-form-field>
+        <magma-label>Stan liczb</magma-label>
+        <input magmaInput type="number" [(ngModel)]="number" inputTypeStyle="number-right" step="1" placeholder="Numbers...">
+</magma-form-field>`
 
-numberExamp_1 = 1337
+  // --- Number --- //
+  textareaCodeExamp = `<magma-form-field>
+        <magma-label>Textarea</magma-label>
+        <textarea magmaTextarea rows="5" style="resize: none;"></textarea>
+</magma-form-field>`
 
 }
