@@ -23,6 +23,10 @@ const routes: Routes = [
       {
         path: 'button',
         loadComponent: () => import('../../components/components/button/button.component').then(c=>c.ButtonComponent),
+      },
+      {
+        path: 'pagination',
+        loadComponent: () => import('../../components/components/pagination/pagination.component').then(c=>c.PaginationComponent),
       }
     ]
   }
