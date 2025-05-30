@@ -16,7 +16,7 @@ import { CodeTemplateComponent } from '../../../templates/code-template/code-tem
 export class TableComponent {
 
   // --- Import --- //
-  codeImport = `import { MagmaTableModule } from 'magma-core';`
+  codeImport = `import { MagmaInputModule } from 'magma-core';`
 
   // --- Basic --- //
   codeBasicExamp: string = `<magma-table [loading]="false">

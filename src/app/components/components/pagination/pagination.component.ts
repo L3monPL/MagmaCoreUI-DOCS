@@ -20,10 +20,10 @@ export class PaginationComponent {
 
   // --- Basic --- //
   codePaginationExamp: string = `<magma-pagination
-          [totalItems]="150"
-          [pageSize]="10"
-          [currentPage]="currentPage"
-          (pageChange)="onPageChange($event)"
+  [totalItems]="150"
+  [pageSize]="10"
+  [currentPage]="currentPage"
+  (pageChange)="onPageChange($event)"
 ></magma-pagination>`
 
 

@@ -33,28 +33,28 @@ export class InputComponent {
   
   // --- Form Fields --- //
   codeInputFormField: string = `<magma-form-field>
-        <magma-label>Stan liczb</magma-label>
-        <input magmaInput type="text" [(ngModel)]="textNgModelFormField" placeholder="Some text...">
+  <magma-label>Stan liczb</magma-label>
+  <input magmaInput type="text" [(ngModel)]="textNgModelFormField" placeholder="Some text...">
 </magma-form-field>`
   textNgModelFormField : string = `Some text...`
   
   // --- Number --- //
   numberExamp_1 = 1337
   numberExampCode_1 = `<magma-form-field>
-        <magma-label>Stan liczb</magma-label>
-        <input magmaInput type="number" [(ngModel)]="number" inputTypeStyle="number" step="1" placeholder="Numbers...">
+  <magma-label>Stan liczb</magma-label>
+  <input magmaInput type="number" [(ngModel)]="number" inputTypeStyle="number" step="1" placeholder="Numbers...">
 </magma-form-field>` 
 
   numberExamp_2 = 5566
   numberExampCode_2 = `<magma-form-field>
-        <magma-label>Stan liczb</magma-label>
-        <input magmaInput type="number" [(ngModel)]="number" inputTypeStyle="number-right" step="1" placeholder="Numbers...">
+  <magma-label>Stan liczb</magma-label>
+  <input magmaInput type="number" [(ngModel)]="number" inputTypeStyle="number-right" step="1" placeholder="Numbers...">
 </magma-form-field>`
 
   // --- Number --- //
   textareaCodeExamp = `<magma-form-field>
-        <magma-label>Textarea</magma-label>
-        <textarea magmaTextarea rows="5" style="resize: none;"></textarea>
+  <magma-label>Textarea</magma-label>
+  <textarea magmaTextarea rows="5" style="resize: none;"></textarea>
 </magma-form-field>`
 
 }

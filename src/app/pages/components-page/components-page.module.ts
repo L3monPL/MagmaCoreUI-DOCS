@@ -27,6 +27,10 @@ const routes: Routes = [
       {
         path: 'pagination',
         loadComponent: () => import('../../components/components/pagination/pagination.component').then(c=>c.PaginationComponent),
+      },
+      {
+        path: 'datepicker',
+        loadComponent: () => import('../../components/components/datepicker/datepicker.component').then(c=>c.DatepickerComponent),
       }
     ]
   }

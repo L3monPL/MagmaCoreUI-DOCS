@@ -1,0 +1,46 @@
+<h2 class="font-base-section">Datepicker is a UI element for date selection</h2>
+<p class="description-section">Datepicker</p>
+
+<!-- IMPORT -->
+
+<br>
+<h3>Import</h3>
+<app-code-template [code]="codeImport"></app-code-template>
+<br>
+<app-code-template [code]="codeImportInput"></app-code-template>
+<!--  -->
+
+<br>
+<h3>Basic</h3>
+<magma-card>
+    <magma-form-field>
+        <magma-label>Wybierz datę</magma-label>
+        <input magmaInput inputTypeStyle="date" typeCalendar="day" type="text" [(ngModel)]="date_1" readonly>
+    </magma-form-field>
+</magma-card>
+<br>
+<app-code-template [code]="codeDatepickerExamp"></app-code-template>
+
+<!--  -->
+
+<!-- <br>
+<div style="position: relative;">
+    <magma-date-picker [dropdown]="true" (selectDateEmmiter)="selectedDate($event)"></magma-date-picker>
+</div> -->
+
+<!--  -->
+
+<br>
+<p class="font-base-section-accent">Examples</p>
+
+<!--  -->
+
+<br>
+<h3>Month</h3>
+<magma-card>
+    <magma-form-field>
+        <magma-label>Wybierz datę</magma-label>
+        <input magmaInput inputTypeStyle="date" typeCalendar="month" type="text" [(ngModel)]="date_2" readonly>
+    </magma-form-field>
+</magma-card>
+<br>
