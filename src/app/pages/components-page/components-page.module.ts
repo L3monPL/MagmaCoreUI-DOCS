@@ -31,7 +31,15 @@ const routes: Routes = [
       {
         path: 'datepicker',
         loadComponent: () => import('../../components/components/datepicker/datepicker.component').then(c=>c.DatepickerComponent),
-      }
+      },
+      {
+        path: 'progress-spinner',
+        loadComponent: () => import('../../components/components/progress-spinner/progress-spinner.component').then(c=>c.ProgressSpinnerComponent),
+      },
+      {
+        path: 'timeline',
+        loadComponent: () => import('../../components/components/timeline/timeline.component').then(c=>c.TimelineComponent),
+      },
     ]
   }
 ]
