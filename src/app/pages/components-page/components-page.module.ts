@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentsPageComponent } from './components-page.component';
 import { RouterModule, Routes } from '@angular/router';
-import { CardComponent } from '../../components/components/card/card.component';
 
 const routes: Routes = [
   {
@@ -11,12 +10,19 @@ const routes: Routes = [
     children: [
       {
         path: 'card',
-        component: CardComponent
-        // loadComponent: () => import('../../components/components/card/card.component').then(c=>c.CardComponent),
+        loadComponent: () => import('../../components/components/card/card.component').then(c=>c.CardComponent),
       },
       {
         path: 'input',
         loadComponent: () => import('../../components/components/input/input.component').then(c=>c.InputComponent),
+      },
+      {
+        path: 'table',
+        loadComponent: () => import('../../components/components/table/table.component').then(c=>c.TableComponent),
+      },
+      {
+        path: 'button',
+        loadComponent: () => import('../../components/components/button/button.component').then(c=>c.ButtonComponent),
       }
     ]
   }
@@ -29,7 +35,6 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    CardComponent
   ],
   exports: [
     ComponentsPageComponent

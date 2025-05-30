@@ -1,7 +1,10 @@
+:host{
+  display: block;
+}
 .code-block-container {
   position: relative;
+  // overflow-x: scroll;
 }
-
 .copy-button {
   position: absolute;
   top: 8px;
@@ -19,5 +22,17 @@
 pre {
   margin: 0px;
   border-radius: 8px;
-  overflow-x: auto;
+  overflow-x: auto!important;
+}
+// pre{
+//   display: block;
+//     margin: 24px auto;
+//     overflow-x: auto;
+//     padding: 20px;
+//     white-space: pre-wrap;
+//     border-radius: 12px;
+// }
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
 }

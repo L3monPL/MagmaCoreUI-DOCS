@@ -1,0 +1,53 @@
+<h2 class="font-base-section">Button is a UI element for user interactions</h2>
+<p class="description-section">Button</p>
+
+<!-- IMPORT -->
+
+<br>
+<h3>Import</h3>
+<app-code-template [code]="codeImport"></app-code-template>
+
+<!--  -->
+
+<br>
+<h3>Basic</h3>
+<magma-card>
+    <button magmaButton>Button</button>
+</magma-card>
+<br>
+<!-- <h3 class="blue_color">Code</h3> -->
+<app-code-template [code]="codeButtonExamp"></app-code-template>
+
+<!--  -->
+
+<br>
+<p class="font-base-section-accent">Examples</p>
+
+<!--  -->
+
+<br>
+<h3>Color</h3>
+<magma-card style="display: flex; column-gap: 0.75rem;">
+    <button magmaButton color="green">Button</button>
+    <button magmaButton color="red">Button</button>
+    <button magmaButton color="purple">Button</button>
+    <button magmaButton color="yellow">Button</button>
+    <button magmaButton color="#cc99cd">Button</button>
+    <button magmaButton color="#7ec699">Button</button>
+</magma-card>
+<br>
+<app-code-template [code]="codeButtonExampColor"></app-code-template>
+<!--  -->
+
+<br>
+<h3>Size</h3>
+<magma-card style="display: flex; column-gap: 0.75rem; align-items: center;">
+    <button magmaButton color="green" size="s">Button</button>
+    <button magmaButton color="red" size="m">Button</button>
+    <button magmaButton color="purple" size="l">Button</button>
+    <button magmaButton color="yellow" size="xl">Button</button>
+    <button magmaButton color="#cc99cd" size="32">Button</button>
+    <button magmaButton color="#7ec699" size="35">Button</button>
+</magma-card>
+<br>
+<app-code-template [code]="codeButtonExampSize"></app-code-template>
