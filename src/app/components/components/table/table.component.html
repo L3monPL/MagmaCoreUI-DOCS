@@ -11,7 +11,7 @@
 
 <br>
 <h3>Basic</h3>
-<!-- <magma-table [loading]="false">
+<magma-table [loading]="false">
     <thead>
       <tr>
         <th class="m-col-s m-mobile-hide">
@@ -42,15 +42,15 @@
         </th>
         <th class="m-col-action">
           <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><circle cx="2" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="22" cy="12" r="2"/></svg>
-          <magma-dropdown-profile-menu magmaStayInViewport>
+          <!-- <magma-dropdown-profile-menu magmaStayInViewport>
             
-          </magma-dropdown-profile-menu>
+          </magma-dropdown-profile-menu> -->
         </th>
       </tr>
     </thead>
     <tbody>
       @for (user of usersList; track $index) {
-        <tr (click)="openItemRightDialog(user)">
+        <tr>
           <td class="m-col-s m-mobile-hide">{{user.id}}</td>
           <td class="m-col-m m-mobile-hide">{{user.name}}</td>
           <td class="m-col-m m-mobile-hide">{{user.surname}}</td>
@@ -63,7 +63,7 @@
         </tr>
       }
     </tbody>
-</magma-table> -->
+</magma-table>
 <br>
 <!-- <h3 class="blue_color">Code</h3> -->
 <app-code-template [code]="codeBasicExamp"></app-code-template>

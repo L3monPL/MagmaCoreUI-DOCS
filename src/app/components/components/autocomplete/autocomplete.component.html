@@ -1,0 +1,35 @@
+<h2 class="font-base-section">---</h2>
+<p class="description-section">Autocomplete</p>
+
+<!-- IMPORT -->
+
+<br>
+<h3>Import</h3>
+<app-code-template [code]="codeImport"></app-code-template>
+<br>
+<app-code-template [code]="codeImportFormFields"></app-code-template>
+<br>
+<app-code-template [code]="codeImportInput"></app-code-template>
+<br>
+<app-code-template [code]="codeImportReactiveForms"></app-code-template>
+
+<!--  -->
+
+<br>
+<h3>Basic</h3>
+
+<magma-card [formGroup]="form">
+    <magma-form-field>
+        <magma-label>Autocomplete</magma-label>
+        <input #inputAutocomplete_1 magmaInput type="text" inputTypeStyle="autocomplete" placeholder="Autocomplete" formControlName="autocomplete">
+        <magma-autocomplete #autocomplete_1 [inputElement]="inputAutocomplete_1" [list]="listAutocomplete" [loading]="loadingAutocomplete" (searchEmitter)="searchAutocomplete($event)">
+            @for (item of listAutocomplete; track $index) {
+                <p magmaAutocompleteItem (click)="selectedAutocompleteObject(item, autocomplete_1)">{{item.name}}</p>
+            }
+        </magma-autocomplete>
+    </magma-form-field>
+</magma-card>
+<br>
+<app-code-template [code]="codeBasicExamp"></app-code-template>
+<br>
+<app-code-template [code]="codeBasicTypescript"></app-code-template>

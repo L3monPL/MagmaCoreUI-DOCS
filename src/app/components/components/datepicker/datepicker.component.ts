@@ -31,7 +31,7 @@ export class DatepickerComponent {
 
 
 
-  date_1 = ''
+  date_1 = this.convertDate(`${new Date()}`)
   date_2 = ''
 
   selectedDateChip = ''

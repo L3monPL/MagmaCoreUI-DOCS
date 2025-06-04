@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MagmaCardModule } from 'magma-core';
+import { MagmaCardModule, MagmaTableModule } from 'magma-core';
 import { CodeTemplateComponent } from '../../../templates/code-template/code-template.component';
 
 @Component({
@@ -8,7 +8,7 @@ import { CodeTemplateComponent } from '../../../templates/code-template/code-tem
   imports: [
     MagmaCardModule,
     CodeTemplateComponent,
-    // MagmaTableModule
+    MagmaTableModule
   ],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
@@ -19,7 +19,7 @@ export class TableComponent {
   codeImport = `import { MagmaInputModule } from 'magma-core';`
 
   // --- Basic --- //
-  codeBasicExamp: string = `<magma-table [loading]="false">
+  codeBasicExamp: string = `<magma-table [loading]="isLoading">
     <thead>
       <tr>
         <th class="m-col-s m-mobile-hide">
@@ -50,15 +50,12 @@ export class TableComponent {
         </th>
         <th class="m-col-action">
           <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><circle cx="2" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="22" cy="12" r="2"/></svg>
-          <magma-dropdown-profile-menu magmaStayInViewport>
-            
-          </magma-dropdown-profile-menu>
         </th>
       </tr>
     </thead>
     <tbody>
       @for (user of usersList; track $index) {
-        <tr (click)="openItemRightDialog(user)">
+        <tr>
           <td class="m-col-s m-mobile-hide">{{user.id}}</td>
           <td class="m-col-m m-mobile-hide">{{user.name}}</td>
           <td class="m-col-m m-mobile-hide">{{user.surname}}</td>
@@ -72,5 +69,96 @@ export class TableComponent {
       }
     </tbody>
 </magma-table>`
+
+  usersList = [
+    {
+      id: 0,
+      name: 'Testowy',
+      surname: 'Tester',
+      email: 'testowy@gmail.com',
+      role: 'admin',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 1,
+      name: 'Mikołaj',
+      surname: 'Andrzejewski',
+      email: 'mikolaj@gmail.com',
+      role: 'admin',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 2,
+      name: 'Anna',
+      surname: 'Kowalska',
+      email: 'anna.kowalska@gmail.com',
+      role: 'user',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 3,
+      name: 'Jan',
+      surname: 'Nowak',
+      email: 'jan.nowak@gmail.com',
+      role: 'user',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 4,
+      name: 'Katarzyna',
+      surname: 'Wiśniewska',
+      email: 'katarzyna.w@gmail.com',
+      role: 'user',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 5,
+      name: 'Piotr',
+      surname: 'Zieliński',
+      email: 'piotr.zielinski@gmail.com',
+      role: 'user',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 6,
+      name: 'Aleksandra',
+      surname: 'Mazur',
+      email: 'aleksandra.mazur@gmail.com',
+      role: 'user',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 7,
+      name: 'Tomasz',
+      surname: 'Krawczyk',
+      email: 'tomasz.krawczyk@gmail.com',
+      role: 'user',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 8,
+      name: 'Magdalena',
+      surname: 'Wójcik',
+      email: 'magdalena.wojcik@gmail.com',
+      role: 'user',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 9,
+      name: 'Kamil',
+      surname: 'Dąbrowski',
+      email: 'kamil.dabrowski@gmail.com',
+      role: 'user',
+      createdAt: '10/04/2025'
+    },
+    {
+      id: 10,
+      name: 'Natalia',
+      surname: 'Kaczmarek',
+      email: 'natalia.kaczmarek@gmail.com',
+      role: 'user',
+      createdAt: '10/04/2025'
+    }
+  ]
 
 }

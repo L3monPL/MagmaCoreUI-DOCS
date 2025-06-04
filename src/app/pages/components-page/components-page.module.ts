@@ -40,6 +40,10 @@ const routes: Routes = [
         path: 'timeline',
         loadComponent: () => import('../../components/components/timeline/timeline.component').then(c=>c.TimelineComponent),
       },
+      {
+        path: 'autocomplete',
+        loadComponent: () => import('../../components/components/autocomplete/autocomplete.component').then(c=>c.AutocompleteComponent),
+      },
     ]
   }
 ]
